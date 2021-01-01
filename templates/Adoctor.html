@@ -1,0 +1,53 @@
+{% extends "Aindex.html" %}
+{% block main %}
+<div class="container">
+    <h1 class="text-center">Doctors</h1>
+    <table class="table table-dark table-stripped">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col"></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+            <td>Mark</td>
+            <td>Mark</td>
+            <td><button class="btn btn-success"><a href="http://127.0.0.1:5000/Dedit"><i class="fas fa-user-edit"></i>Edit</a></button>
+                <button class="btn btn-danger"><a href="http://127.0.0.1:5000/Ddelete"><i class="fas fa-user-minus"></i>Delete</a></button>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td><button class="btn btn-success"><a href="http://127.0.0.1:5000/Dedit"><i class="fas fa-user-edit"></i>Edit</a></button>
+                <button class="btn btn-danger"><a href="http://127.0.0.1:5000/Ddelete"><i class="fas fa-user-minus"></i>Delete</a></button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+        
+{% endblock %}

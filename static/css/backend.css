@@ -1,0 +1,28 @@
+body{
+    box-sizing: content-box;
+    background-color: #dbd6d62e;
+}
+.nav-item{
+    margin:0 25px;
+}
+h1{
+    margin: 20px;
+}
+.box{
+    border: 15px inset #514abe;
+    overflow: auto;
+}
+.box a{
+    font-size: 35px;
+    font-weight: bold;
+}
+td a{
+    font-weight: bold;
+    color: white;
+}
+i{
+    margin-right:10px
+}
+a{
+    text-decoration: none;
+}
