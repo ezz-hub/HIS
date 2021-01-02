@@ -5,47 +5,17 @@
     <table class="table table-dark table-stripped">
         <thead>
         <tr>
-            <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col"></th>
+            <th scope="col">ID</th>
+            <th scope="col">Complian</th>
         </tr>
         </thead>
         <tbody>
+        {% for complain in complains_data %}
         <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td><button class="btn btn-success"><a href="http://127.0.0.1:5000/Cedit"><i class="fas fa-user-edit"></i>Edit</a></button>
-                <button class="btn btn-danger"><a href="http://127.0.0.1:5000/Cdelete"><i class="fas fa-user-minus"></i>Delete</a></button>
-            </td>
+            <td>{{complain.0}}</td>
+            <td>{{complain.1}}</td>
         </tr>
-        <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td><button class="btn btn-success"><a href="http://127.0.0.1:5000/Cedit"><i class="fas fa-user-edit"></i>Edit</a></button>
-                <button class="btn btn-danger"><a href="http://127.0.0.1:5000/Cdelete"><i class="fas fa-user-minus"></i>Delete</a></button>
-            </td>
-        </tr>
+        {% endfor %}
         </tbody>
     </table>
 </div>

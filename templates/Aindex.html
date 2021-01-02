@@ -13,23 +13,23 @@
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="http://127.0.0.1:5000/Aindex">Dar Elfoad</a>
+                <a class="navbar-brand" href="{{ url_for('Aindex') }}">Dar Elfoad</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto  mx-auto">
                         <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="http://127.0.0.1:5000/Aindex">Home</a>
+                        <a class="nav-link active" aria-current="page" href="{{ url_for('Aindex') }}">Home</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="http://127.0.0.1:5000/Adoctor">Doctors</a>
+                        <a class="nav-link" href="{{ url_for('Adoctor') }}">Doctors</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="http://127.0.0.1:5000/Apatient">Patients</a>
+                        <a class="nav-link" href="{{ url_for('Apatient') }}">Patients</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="http://127.0.0.1:5000/Acomplains">Complains</a>
+                        <a class="nav-link" href="{{ url_for('Acomplains') }}">Complains</a>
                         </li>
                     </ul>
                     <ul class="navbar-nav me-auto  mx-auto">
@@ -48,21 +48,21 @@
             <div class="col-lg-4">
                 <div class="box text-center">
                     <h2>Doctors</h2>
-                    <a href="http://127.0.0.1:5000/Adoctor">1000</a>
+                    <a href="http://127.0.0.1:5000/Adoctor">{{doctors_no}}</a>
                 </div>
             </div>
 
             <div class="col-lg-4">
                 <div class="box text-center">
                     <h2>Patients</h2>
-                    <a href="http://127.0.0.1:5000/Apatient">5000</a>
+                    <a href="http://127.0.0.1:5000/Apatient">{{p_no}}</a>
                 </div>
             </div>
 
             <div class="col-lg-4">
                 <div class="box text-center">
                     <h2>Complains</h2>
-                    <a href="http://127.0.0.1:5000/Acomplains">20000</a>
+                    <a href="http://127.0.0.1:5000/Acomplains">{{comp_no}}</a>
                 </div>
             </div>
         </div>

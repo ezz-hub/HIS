@@ -1,11 +1,11 @@
-from flask import Flask, render_template ,request#import flask class
+from flask import Flask, render_template ,request #import flask class
 
 import mysql.connector
 mydb = mysql.connector.connect(
-    host = 'localhost',
-    user = 'root',
-    passwd = '',
-    database = 'myPythonDatabase'
+    host = 'sql7.freemysqlhosting.net',
+    user = 'sql7384553',
+    passwd = 'EBclWXd7nQ',
+    database = 'sql7384553'
 )
 myCursor = mydb.cursor()
 
@@ -14,16 +14,24 @@ app.config["TEMPLATES_AUTO_RELOAD"] = True
 
 @app.route('/')
 def Aindex():
-    return render_template('Aindex.html')
+    myCursor.execute("SELECT count(id) FROM dr")
+    myResult3 = myCursor.fetchall()
 
-@app.route('/Aindex')
-def A2index():
-    return render_template('Aindex.html')
+    myCursor2 = mydb.cursor()
+    myCursor2.execute("SELECT count(ssn) FROM patient")
+    myResult4 = myCursor2.fetchall()
+    
+    myCursor3 = mydb.cursor()
+    myCursor3.execute("SELECT count(*) FROM contact_us")
+    myResult6 = myCursor3.fetchall()
+    return render_template('Aindex.html', doctors_no = myResult3 ,p_no =myResult4,comp_no =myResult6)
 
 
 @app.route('/Adoctor')
 def Adoctor():
-    return render_template('Adoctor.html')
+    myCursor.execute("SELECT * FROM dr")
+    myResult = myCursor.fetchall()
+    return render_template('Adoctor.html' ,doctors_data = myResult)
 
 @app.route('/Dedit')
 def Dedit():
@@ -40,7 +48,9 @@ def Ddelete():
 
 @app.route('/Apatient') 
 def Apatient():
-    return render_template('Apatient.html')
+    myCursor.execute("SELECT * FROM patient")
+    myResult2 = myCursor.fetchall()
+    return render_template('Apatient.html' , patients_data = myResult2)
 
 @app.route('/Pedtit')
 def Pedit():
@@ -57,7 +67,9 @@ def Pdelete():
 
 @app.route('/Acomplains') 
 def Acomplains():
-    return render_template('Acomplains.html')
+    myCursor.execute("SELECT * FROM contact_us")
+    myResult5 = myCursor.fetchall()
+    return render_template('Acomplains.html' ,complains_data = myResult5)
 
 @app.route('/Cedtit')
 def Cedit():
