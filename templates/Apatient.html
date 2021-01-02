@@ -14,11 +14,13 @@
             <th scope="col">Weight</th>
             <th scope="col">Entery Date</th>
             <th scope="col">Disease</th>
+            <th scope="col">Doctor's name</th>
             <th scope="col"></th>
         </tr>
         </thead>
         <tbody>
         {% for pdata in patients_data%}
+        {% print data%}
         <tr>
             <td>{{ pdata.0 }}</td>
             <td>{{ pdata.1 }}</td>
@@ -29,6 +31,7 @@
             <td>{{ pdata.6 }}</td>
             <td>{{ pdata.7 }}</td>
             <td>{{ pdata.8 }}</td>
+            <td>{{ pdata.9 }}</td>
             <td><button class="btn btn-success"><a href="http://127.0.0.1:5000/Pedit"><i class="fas fa-user-edit"></i>Edit</a></button>
                 <button class="btn btn-danger"><a href="http://127.0.0.1:5000/Pdelete"><i class="fas fa-user-minus"></i>Delete</a></button>
             </td>
