@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="wid th=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/styles.css')}}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+
+
+
+
+</head>
+<body class="main">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+<div class="main-menu">
+  <div class="main-menu-form">
+    <div class="main-menu-btn"><i class="fa fa-bars"></i></div>
+  </div>
+  <div class="main-menu-content">
+    <!-- main logo -->
+    <div class="main-menu-logo">
+      <h2>Everything will be okay in the end</h2>
+    </div>
+    <!-- navigation -->
+    <ul class="main-menu-nav">
+      <li><a href="/SignUp" class="orange"><i class="fa fa-home fa-fw"></i>&nbsp; Sign Up</a></li>
+      <li><a href="#" class="yellow"><i class="fa fa-book fa-fw front"></i>&nbsp; Library</a></li>
+      <li><a href="#" class="green"><i class="fa fa-folder fa-fw"></i>&nbsp; Forum</a></li>
+      <li><a href="#" class="purple"><i class="fa fa-envelope fa-fw"></i>&nbsp; Contact</a></li>
+      <li><a href="#" class="red"><i class="fa fa-users fa-fw"></i>&nbsp; About</a></li>
+    </ul>
+
+    <a href="#" class="main-menu-close"><i class="fa fa-close"></i>&nbsp; Close menu</a>
+  </div>
+</div>
+<div class="main-wrapper">
+
+</div>
+
+
+
+
+ <div class="container">
+         <header>Signup Form</header>
+     <div class="progress-bar">
+          <div class="step">
+              <p>Name..</p>
+    <div class="bullet">
+            <span>1</span>
+    </div>
+<div    class="check fas fa-check"></div>
+        </div>
+<div    class="step">
+          <p>Pass..</p>
+    <div class="bullet">
+            <span>2</span>
+    </div>
+        <div class="check fas fa-check">
+
+        </div>
+</div>
+
+         <div class="step">
+         <p>  Info..</p>
+<div class="bullet">
+            <span>3</span>
+</div>
+             <div class="check fas fa-check"></div>
+        </div>
+
+
+         <div class="step">
+             <p>Submit..</p>
+<div class="bullet">
+            <span>4</span>
+</div>
+
+<div class="check fas fa-check"></div>
+        </div>
+</div>
+<div class="form-outer">
+    <form action="#">
+          <div class="page slide-page" >
+            <div class="title">Basic Info:</div>
+            <div class="field">
+              <div class="label">User Name</div>
+                <span></span>
+<input  type="text" name="UName" id="UName" placeholder="example: Erik , Alex, Tom" required="" oninvalid="this.setCustomValidity('Please Enter User Name')"
+ oninput="setCustomValidity('')" onvalid="this.setCustomValidity('')">
+            </div>
+<div class="field">
+              <div class="label">Email</div>
+<input type="text" name="email" id="email" placeholder="example:Erik@gmail.com" required="" oninvalid="this.setCustomValidity('Please Enter User Email')"
+ oninput="setCustomValidity('')" onvalid="this.setCustomValidity('')" >
+</div>
+<div class="field">
+              <button class="firstNext next">Next</button>
+</div>
+</div>
+<div class="page">
+            <div class="title">Password Confirmation:</div>
+<div class="field">
+              <div class="label">Password</div>
+<input type="password" name="password1" id="password1" placeholder="Enter your password" required="" oninvalid="this.setCustomValidity('Please Enter User Password')"
+ oninput="setCustomValidity('')" onvalid="this.setCustomValidity('')">
+</div>
+<div class="field">
+              <div class="label">Confirm password</div>
+    <input type="password" name="password2" id="password2" placeholder="Repeat password">
+</div>
+<div class="field btns">
+              <button class="prev-1 prev">Previous</button>
+              <button class="next-1 next">Next</button>
+</div>
+</div>
+<div class="page">
+            <div class="title">Info</div>
+<div class="field">
+              <div class="label">Phone</div>
+<input type="Number" name="phone" id="phone" placeholder="*********" required="" oninvalid="this.setCustomValidity('Please Enter User Phone')"
+ oninput="setCustomValidity('')" onvalid="this.setCustomValidity('')">
+</div>
+<div class="field">
+              <div class="label">address</div>
+<input type="text" name="address" id="address" placeholder="Location" required="" oninvalid="this.setCustomValidity('Please Enter User Address')"
+ oninput="setCustomValidity('')" onvalid="this.setCustomValidity('')">
+
+</div>
+<div class="field btns">
+              <button class="prev-2 prev">Previous</button>
+              <button class="next-2 next">Next</button>
+</div>
+</div>
+<div class="page">
+            <div class="title">Specifications</div>
+<div class="field">
+              <div class="label">Department</div>
+<input type="text" name="department" id="department" placeholder="Radiology,Ocular,Emergency" required="" oninvalid="this.setCustomValidity('Please Enter User Department')"
+ oninput="setCustomValidity('')" onvalid="this.setCustomValidity('')">
+</div>
+<div class="field">
+              <div class="label">Experience of years</div>
+<input type="number" name="Experiance" id="Experiance" placeholder="1,2,3.....15" required="" oninvalid="this.setCustomValidity('Please Enter User Experiance')"
+ oninput="setCustomValidity('')" onvalid="this.setCustomValidity('')">
+</div>
+<div class="field btns">
+              <button class="prev-3 prev">Previous</button>
+              <button class="submit">Submit</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+
+
+</body>
+</html>
+

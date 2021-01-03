@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="wid th=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/styles.css')}}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+
+
+
+    {%block head%}{%endblock%}
+
+</head>
+<body class="main">
+    {%block body%}{%endblock%}
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+<h2 class="Selectorr" >Please select Profession</h2>
+
+
+<form action="/SignUp" >
+        <input type="image"  src="{{url_for('static',filename='images/wp2968489-medical-doctor-wallpaper.jpg')}}"
+        alt="Doctor" id="Doctor" name="Doctor" class="img_Doc" onmouseover="Appear()" onmouseout="Disappear()"
+        >
+        <h1 class="WelcomeDoc" id="WelcomeDoctor"  data-text="You are a doctor" >You are a doctor</h1>
+
+</form>
+
+
+<form action="/SignUp2" >
+        <input type="image"  src="{{url_for('static',filename='images/wallpaperflare.com_wallpaper.jpg')}}"
+        alt="Doctor" id="Pachient" name="Pachient" class="img_Pachient" onmouseover="Appear2()" onmouseout="Disappear2()"
+        >
+         <h1 class="WelcomeDear" id="WelcomeDear"  data-text="You are our visitor" >You are our visitor</h1>
+</form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

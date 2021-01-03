@@ -87,4 +87,170 @@ $(function(){
         $(".Msg2").fadeOut();
     });
     
-}); 
+});
+/*Ezz1*/
+
+    <!-- Created By CodingNepal -->
+const slidePage = document.querySelector(".slide-page");
+const nextBtnFirst = document.querySelector(".firstNext");
+const prevBtnSec = document.querySelector(".prev-1");
+const nextBtnSec = document.querySelector(".next-1");
+const prevBtnThird = document.querySelector(".prev-2");
+const nextBtnThird = document.querySelector(".next-2");
+const prevBtnFourth = document.querySelector(".prev-3");
+const submitBtn = document.querySelector(".submit");
+const progressText = document.querySelectorAll(".step p");
+const progressCheck = document.querySelectorAll(".step .check");
+const bullet = document.querySelectorAll(".step .bullet");
+let current = 1;
+
+nextBtnFirst.addEventListener("click", function(event){
+    event.preventDefault();
+  slidePage.style.marginLeft = "-25%";
+  slidePage.style.opacity =1;
+
+  bullet[current - 1].classList.add("active");
+  progressCheck[current - 1].classList.add("active");
+  progressText[current - 1].classList.add("active");
+  current += 1;
+});
+nextBtnSec.addEventListener("click", function(event){
+  event.preventDefault();
+  slidePage.style.marginLeft = "-50%";
+  bullet[current - 1].classList.add("active");
+  progressCheck[current - 1].classList.add("active");
+  progressText[current - 1].classList.add("active");
+  current += 1;
+});
+nextBtnThird.addEventListener("click", function(event){
+  event.preventDefault();
+  slidePage.style.marginLeft = "-75%";
+  bullet[current - 1].classList.add("active");
+  progressCheck[current - 1].classList.add("active");
+  progressText[current - 1].classList.add("active");
+  current += 1;
+});
+submitBtn.addEventListener("click", function(){
+  bullet[current - 1].classList.add("active");
+  progressCheck[current - 1].classList.add("active");
+  progressText[current - 1].classList.add("active");
+  current += 1;
+  /*setTimeout(function(){
+    alert("Your Form Successfully Signed up");
+    location.reload();
+  },800);*/
+});
+
+prevBtnSec.addEventListener("click", function(event){
+  event.preventDefault();
+  slidePage.style.marginLeft = "0%";
+  bullet[current - 2].classList.remove("active");
+  progressCheck[current - 2].classList.remove("active");
+  progressText[current - 2].classList.remove("active");
+  current -= 1;
+});
+prevBtnThird.addEventListener("click", function(event){
+  event.preventDefault();
+  slidePage.style.marginLeft = "-25%";
+  bullet[current - 2].classList.remove("active");
+  progressCheck[current - 2].classList.remove("active");
+  progressText[current - 2].classList.remove("active");
+  current -= 1;
+});
+prevBtnFourth.addEventListener("click", function(event){
+  event.preventDefault();
+  slidePage.style.marginLeft = "-50%";
+  bullet[current - 2].classList.remove("active");
+  progressCheck[current - 2].classList.remove("active");
+  progressText[current - 2].classList.remove("active");
+  current -= 1;
+});
+var password = document.getElementById("password1")
+  , confirm_password = document.getElementById("password2");
+
+function validatePassword(){
+  if(password.value != confirm_password.value) {
+    confirm_password.setCustomValidity("Passwords Don't Match");
+  } else {
+    confirm_password.setCustomValidity('');
+  }
+}
+
+password.onchange = validatePassword;
+confirm_password.onkeyup = validatePassword;
+
+var MainMenu = (function() {
+    var MainMenu = function(config) {
+        config = config || {};
+        this.toggleBtn = $(config.toggleBtn);
+        this.menu = $(config.menu);
+        this.close = $(config.close);
+
+        this.init();
+        config = null;
+    };
+    // public interface
+    MainMenu.prototype = {
+        constructor: MainMenu,
+        init: function() {
+            this.eventManager();
+        },
+        eventManager: function() {
+            this.toggleBtn.on('click.openMenu', onButtonClickHandler.bind(this));
+            this.close.on('click.closeMenu', onCloseClickHandler.bind(this));
+        }
+    };
+    // private interface
+    function onButtonClickHandler(menu, evt) {
+        if (!this.menu.hasClass('open')) {
+            this.menu.addClass('open');
+        };
+
+    }
+
+    function onCloseClickHandler(evt) {
+        this.menu.removeClass('open')
+    }
+
+    function onDocumentClickHandler(evt) {
+        var $target = $(evt.target);
+
+        if (!$target.closest(this.menuForm).length && !$target.closest(this.menuContent).length && this.menu.hasClass('open')) {
+            this.menu.removeClass('open')
+        }
+    }
+
+    return MainMenu;
+})();
+
+
+$(document).ready(function() {
+    var mainMenu = new MainMenu({
+        menu: '.main-menu',
+        toggleBtn: '.main-menu-btn',
+        close: '.main-menu-close'
+    });
+});
+/*Ezz2*/
+ function Appear(){
+
+
+                var text=document.getElementById('WelcomeDoctor').style.opacity=1;
+        }
+        function Disappear(){
+
+                var text=document.getElementById('WelcomeDoctor').style.opacity=0;
+
+        }
+        function Appear2(){
+
+
+                var text=document.getElementById('WelcomeDear').style.opacity=1;
+        }
+        function Disappear2(){
+
+                var text=document.getElementById('WelcomeDear').style.opacity=0;
+
+        }
+
+
